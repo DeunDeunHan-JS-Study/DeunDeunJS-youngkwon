@@ -11,15 +11,8 @@ let promise = new Promise((resolve, reject) => {
 
 ## 02. State change of promise object
 
-new Promise( state: pending, result: undefined )<br>
-=> resolve(value)<br>
-=> (state: fulfilled, result: value)
+<img width="538" alt="스크린샷 2021-10-24 오후 4 17 24" src="https://user-images.githubusercontent.com/39653584/138607332-f146ed8b-7538-4638-8ad6-2a5aed0f887c.png">
 
----
-
-new Promise( state: pending, result: undefined )<br>
-=> reject(err: Error)<br>
-=> (state: rejected, result: err)
 <br><br>
 
 ## 03. Resolve & Reject
