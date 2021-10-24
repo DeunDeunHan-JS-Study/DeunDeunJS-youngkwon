@@ -3,7 +3,7 @@
 - Javascript & Typescript에서 function은 first class function.
 <br><br>
 ## 02. Error Handling
-- callback 함수가 에러를 핸들링 할 수 있게 다음과 같이 오류 우선 콜백(error-first-callback) 패턴을 따른다.
+- callback function이 error handling 할 수 있게 다음과 같은 오류 우선 콜백(error-first-callback) 패턴을 따른다.
 
 ```javascript
 // loadScript function 정의
