@@ -28,3 +28,7 @@ promise
 .then(console.log(name)); // Unknown 출력
 
 ```
+<br>
+
+## 02. Task flow
+<img width='700' src="https://user-images.githubusercontent.com/39653584/138607229-82f5ec71-dc5a-4e21-856e-12850a744c54.gif" />
