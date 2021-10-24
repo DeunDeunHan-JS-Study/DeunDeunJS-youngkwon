@@ -54,3 +54,17 @@ new Promise( state: pending, result: undefined )<br>
   .finally(() => alert("promise가 준비되었습니다."))
   .then((result) => console.log(result));
   ```
+<br><br>
+## 05. Promise Chaining
+- promise.then(handler)에 사용된 handler가 Promise object를 return 하거나,
+- handler가 어떤 값을 return하면 이 값이 promise의 result로 설정되므로 chaining 가능
+
+```javascript
+new Promise((resolve, reject) => {
+    resolve(1);
+})
+.then((result)=>(result*2))
+.then((result) => (result + 5))
+.then((result) => {return new Error(`에러 발생 ${result}`)})
+.then(null, alert);
+```
