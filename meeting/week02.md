@@ -44,7 +44,7 @@
     // Case 02:
     Promise.allSettled([
     new Promise(resolve => setTimeout(() => resolve("as 01"), 3000)), // as 01
-    new Promise((resolve, reject) => setTimeout(() => reject(new Error('err')), 2000)), // as 02
+    new Promise((resolve, reject) => setTimeout(() => reject(new Error('err')), 2000)), // Error
     new Promise(resolve => setTimeout(() => resolve("as 03"), 1000))  // as 03
     ]).then(console.log);
 
