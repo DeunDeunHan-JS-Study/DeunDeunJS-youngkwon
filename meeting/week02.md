@@ -36,16 +36,16 @@
   ```js
     // Case 01:
     Promise.all([
-    new Promise(resolve => setTimeout(() => resolve("all 01"), 3000)), // 1
-    new Promise(resolve => setTimeout(() => resolve("all 02"), 2000)), // 2
-    new Promise(resolve => setTimeout(() => resolve("all 03"), 1000))  // 3
+    new Promise(resolve => setTimeout(() => resolve("all 01"), 3000)), // all 01
+    new Promise(resolve => setTimeout(() => resolve("all 02"), 2000)), // all 02
+    new Promise(resolve => setTimeout(() => resolve("all 03"), 1000))  // all 03
     ]).then(console.log);
 
     // Case 02:
     Promise.allSettled([
-    new Promise(resolve => setTimeout(() => resolve("as 01"), 3000)), // 10
-    new Promise((resolve, reject) => setTimeout(() => reject(new Error('err')), 2000)), // 20
-    new Promise(resolve => setTimeout(() => resolve("as 03"), 1000))  // 30
+    new Promise(resolve => setTimeout(() => resolve("as 01"), 3000)), // as 01
+    new Promise((resolve, reject) => setTimeout(() => reject(new Error('err')), 2000)), // as 02
+    new Promise(resolve => setTimeout(() => resolve("as 03"), 1000))  // as 03
     ]).then(console.log);
 
     // Case 03:
