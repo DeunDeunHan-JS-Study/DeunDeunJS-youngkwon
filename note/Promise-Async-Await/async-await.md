@@ -3,7 +3,7 @@
 ## 01. async
 - function앞에 위치하는 keyword
 - async function은 항상 promise를 return
-- 단순 값을 return하면, 이는 fulfilled promise의 result로써 return
+- 단순 값을 return하면, 이는 fulfilled promise의 result로써 return
 
 
 ## 02. await
