@@ -28,3 +28,12 @@ const serving = (progress: string): Promise<String> => {
     }, 3000);
   });
 };
+
+const eat = (progress: string): Promise<String> => {
+  return new Promise((resolve, reject) => {
+    restaurant(() => {
+      console.log("[레스토랑 진행상황 - 음식 먹기]");
+      resolve(`${progress} -> 음식 먹는 중`);
+    }, 4000);
+  });
+};
