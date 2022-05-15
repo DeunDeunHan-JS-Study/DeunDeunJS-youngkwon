@@ -19,3 +19,12 @@ const cook = (progress: string): Promise<String> => {
     }, 2000);
   });
 };
+
+const serving = (progress: string): Promise<String> => {
+  return new Promise((resolve, reject) => {
+    restaurant(() => {
+      console.log("[레스토랑 진행상황 - 음식 서빙]");
+      resolve(`${progress} -> 음식 서빙 중`);
+    }, 3000);
+  });
+};
