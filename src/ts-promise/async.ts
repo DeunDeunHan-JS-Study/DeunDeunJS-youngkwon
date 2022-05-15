@@ -11,7 +11,7 @@ const order = (): Promise<string> => {
   });
 };
 
-const cook = (progress: string): Promise<String> => {
+const cook = (progress: string): Promise<string> => {
   return new Promise((resolve, reject) => {
     restaurant(() => {
       console.log("[레스토랑 진행상황 - 음식 조리]");
@@ -20,7 +20,7 @@ const cook = (progress: string): Promise<String> => {
   });
 };
 
-const serving = (progress: string): Promise<String> => {
+const serving = (progress: string): Promise<string> => {
   return new Promise((resolve, reject) => {
     restaurant(() => {
       console.log("[레스토랑 진행상황 - 음식 서빙]");
@@ -29,7 +29,7 @@ const serving = (progress: string): Promise<String> => {
   });
 };
 
-const eat = (progress: string): Promise<String> => {
+const eat = (progress: string): Promise<string> => {
   return new Promise((resolve, reject) => {
     restaurant(() => {
       console.log("[레스토랑 진행상황 - 음식 먹기]");
@@ -37,3 +37,9 @@ const eat = (progress: string): Promise<String> => {
     }, 4000);
   });
 };
+
+order()
+  .then((progress) => cook(progress))
+  .then((progress) => serving(progress))
+  .then((progress) => eat(progress))
+  .then((progress) => console.log(progress));
