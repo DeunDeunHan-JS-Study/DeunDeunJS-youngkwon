@@ -10,3 +10,12 @@ const order = (): Promise<string> => {
     }, 1000);
   });
 };
+
+const cook = (progress: string): Promise<String> => {
+  return new Promise((resolve, reject) => {
+    restaurant(() => {
+      console.log("[레스토랑 진행상황 - 음식 조리]");
+      resolve(`${progress} -> 음식 조리 중`);
+    }, 2000);
+  });
+};
